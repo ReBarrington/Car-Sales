@@ -12,7 +12,7 @@ const store = createStore(
     reducer,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   );
-  console.log(store.getState, ' is store.getState in createStore')
+  // console.log(store.getState, ' is store.getState in createStore')
 
 
   const rootElement = document.getElementById('root');

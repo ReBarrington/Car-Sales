@@ -9,7 +9,7 @@ import Total from './components/Total';
 
 
 const App = props => {
-console.log(props, " props to App")
+// console.log(props, " props to App")
 
   // const removeFeature = item => {
   //   // dispatch an action here to remove an item

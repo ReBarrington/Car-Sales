@@ -18,8 +18,7 @@ export const initialState = {
 }
 
 export const reducer = (state = initialState, action) => {
-    console.log(state, ' is state in reducer')
-    console.log(action, ' is action in reducer')
+    // console.log(state, ' is state in reducer')
 
     switch (action.type) {
         case 'REMOVE_FEATURE':
@@ -32,10 +31,14 @@ export const reducer = (state = initialState, action) => {
             console.log(clickedItem, " clickedItem")
             return {
                 ...state,
+                additionalPrice: clickedItem.price,
                 car: {
                     price: state.car.price + clickedItem.price,
+                    name: '2019 Ford Mustang',
+                    image: 'https://cdn.motor1.com/images/mgl/0AN2V/s1/2019-ford-mustang-bullitt.jpg',
                     features: clickedItem.name
                 }
+                // additionalFeatures: 
             }
         default: 
             return state;
