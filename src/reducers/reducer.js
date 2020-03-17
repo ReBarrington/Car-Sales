@@ -22,15 +22,23 @@ export const reducer = (state = initialState, action) => {
     console.log(action, ' is action in reducer')
 
     switch (action.type) {
-        case 'REMOVE_ITEM':
+        case 'REMOVE_FEATURE':
             return {
-                ...state,
+                ...state, 
             }
+
         case 'BUY_ITEM':
+            const clickedItem = action.payload //feature
+            console.log(clickedItem, " clickedItem")
             return {
                 ...state,
+                car: {
+                    price: state.car.price + clickedItem.price,
+                    features: clickedItem.name
+                }
             }
         default: 
             return state;
     }
 }
+

@@ -22,9 +22,3 @@ const store = createStore(
         </Provider>,
         rootElement
         );
-
-const mapStateToProps = state => {
-    return {
-        
-    }
-    }
