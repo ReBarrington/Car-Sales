@@ -21,6 +21,8 @@ const App = props => {
   //   return { type: 'BUY_ITEM', payload: "buy this item" } ;
   // };
 
+  // console.log(props.additionalFeatures, ' is props.additionalFeatures in app')
+
   return (
     <div className="boxes">
       <div className="box">
@@ -47,10 +49,10 @@ const mapStateToProps = state => {
       features: [state.car.features]
     },
     additionalFeatures: [
-      { id: 1, name: 'V-6 engine', price: 1500 },
-      { id: 2, name: 'Racing detail package', price: 1500 },
-      { id: 3, name: 'Premium sound system', price: 500 },
-      { id: 4, name: 'Rear spoiler', price: 250 }
+      { id: 1, name: 'V-6 engine', price: 1500},
+      { id: 2, name: 'Racing detail package', price: 1500},
+      { id: 3, name: 'Premium sound system', price: 500},
+      { id: 4, name: 'Rear spoiler', price: 250}
     ]
   }
 }

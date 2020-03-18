@@ -5,13 +5,14 @@ const AdditionalFeature = props => {
   // console.log(props, ' is props in AdditionalFeature')
 
   return (
-    <li>
+    <li> 
+    {/* className={` ${props.isBoxVisible ? "" : "hidden"}`} */}
       {/* Add an onClick that will let you add a feature to your car */}
       <button 
         className="button"
         onClick={() => {props.buyItem(props.feature)}}
       >Add</button>
-      {props.feature.name} (+{props.feature.price})
+        {props.feature.name} (+{props.feature.price})
     </li>
   );
 };
