@@ -2,7 +2,7 @@ import React from 'react';
 
 const AddedFeature = props => {
 
-  // console.log(props, ' is props for AddedFeature')
+  console.log(props, ' is props for AddedFeature')
 
   return (
     <li>
@@ -13,7 +13,11 @@ const AddedFeature = props => {
       >
         X
       </button>
-      {props.feature}
+      {props.feature.map(fture => 
+        <ul className="addedfeatures-list">
+          <li>{fture}</li>
+        </ul>
+      )}
     </li>
   );
 };
