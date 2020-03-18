@@ -24,10 +24,11 @@ export const reducer = (state = initialState, action) => {
         case 'REMOVE_FEATURE':
             return {
                 ...state, 
+                additionalPrice: 0,
                 car: {
-                    price: 26395,
-                    name: '2019 Ford Mustang',
-                    image: 'https://cdn.motor1.com/images/mgl/0AN2V/s1/2019-ford-mustang-bullitt.jpg',
+                    price: state.car.price,
+                    name: state.car.name,
+                    image: state.car.image,
                     features: []
                 }
             }
@@ -39,9 +40,9 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 additionalPrice: clickedItem.price,
                 car: {
-                    price: state.car.price + clickedItem.price,
-                    name: '2019 Ford Mustang',
-                    image: 'https://cdn.motor1.com/images/mgl/0AN2V/s1/2019-ford-mustang-bullitt.jpg',
+                    price: state.car.price,
+                    name: state.car.name,
+                    image: state.car.image,
                     features: [...state.car.features, clickedItem.name]
                 },
                 additionalFeatures: state.additionalFeatures.splice(clickedItem.id-1, 1)

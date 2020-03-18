@@ -2,7 +2,7 @@ import React from 'react';
 
 const AddedFeature = props => {
 
-  console.log(props, ' is props for AddedFeature')
+  // console.log(props, ' is props for AddedFeature')
 
   return (
     <li>
