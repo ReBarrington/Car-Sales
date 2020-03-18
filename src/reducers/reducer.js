@@ -36,6 +36,10 @@ export const reducer = (state = initialState, action) => {
         case 'BUY_ITEM':
             const clickedItem = action.payload //feature
             console.log(clickedItem, " clickedItem")
+
+            const additionalFeaturesArray = [...state.additionalFeatures];
+            additionalFeaturesArray.splice(clickedItem.id-1, 1)
+
             return {
                 ...state,
                 additionalPrice: clickedItem.price,
@@ -45,7 +49,7 @@ export const reducer = (state = initialState, action) => {
                     image: state.car.image,
                     features: [...state.car.features, clickedItem.name]
                 },
-                additionalFeatures: state.additionalFeatures.splice(clickedItem.id-1, 1)
+                additionalFeatures: additionalFeaturesArray
             }
         default: 
             return state;
